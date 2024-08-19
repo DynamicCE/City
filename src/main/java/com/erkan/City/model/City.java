@@ -1,9 +1,9 @@
 package com.erkan.City.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Entity
 @Table(name = "cities")
@@ -14,4 +14,8 @@ class City {
     private Long id;
 
     private String name;
+
+    @OneToMany(mappedBy = "city")
+    private List<User> users;
+
 }
