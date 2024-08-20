@@ -1,21 +1,21 @@
-package com.erkan.City.model;
+    package com.erkan.City.model;
 
-import jakarta.persistence.*;
-import lombok.Data;
+    import jakarta.persistence.*;
+    import lombok.Data;
 
-import java.util.List;
+    import java.util.List;
 
-@Entity
-@Table(name = "cities")
-@Data
-public
-class City {
-    @Id
-    private Long id;
+    @Entity
+    @Table(name = "cities")
+    @Data
+    public
+    class City {
+        @Id
+        private short id;
 
-    private String name;
+        private String name;
 
-    @OneToMany(mappedBy = "city")
-    private List<User> users;
+        @OneToMany(mappedBy = "city")
+        private List<User> users;
 
-}
+    }

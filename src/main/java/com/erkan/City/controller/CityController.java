@@ -32,7 +32,7 @@ class CityController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Result<City>> getCityById( @PathVariable Long id ){
+    public ResponseEntity<Result<City>> getCityById( @PathVariable short id ){
         Result<City> result = cityService.getCityById (id);
         return new ResponseEntity(result, HttpStatus.OK );
     }

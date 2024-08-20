@@ -41,7 +41,7 @@ class CityService {
     }
 
     public
-    Result<City> getCityById ( Long id ) {
+    Result<City> getCityById ( short id ) {
 
         try {
            Optional<City> result = cityRepository.findById ( id );

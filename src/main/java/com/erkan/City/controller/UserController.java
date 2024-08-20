@@ -1,2 +1,5 @@
-package com.erkan.City.controller;public class UserController {
+package com.erkan.City.controller;
+
+public
+class UserController {
 }
