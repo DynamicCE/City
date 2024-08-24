@@ -2,6 +2,7 @@ package com.erkan.City.service;
 
 import com.erkan.City.model.User;
 import com.erkan.City.model.dto.UserDto;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.erkan.City.repository.UserRepository;
@@ -14,10 +15,13 @@ class UserService {
 
     private
     UserRepository userRepository;
+    private
+    ModelMapper modelMapper;
 
     public
-    UserService ( UserRepository userRepository ) {
+    UserService ( UserRepository userRepository, ModelMapper modelMapper ) {
         this.userRepository = userRepository;
+        this.modelMapper = modelMapper;
     }
 
     private static final Logger log = LoggerFactory.getLogger ( UserService.class );
